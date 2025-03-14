@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "alpingo23",
   "license": "ISC",
-  "description": "",
+  "description": "Backend for face analysis",
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
     "canvas": "^3.1.0",
