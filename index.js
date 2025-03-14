@@ -32,13 +32,13 @@ async function loadModels() {
 
 // Sunucuyu başlatmadan önce modelleri yükle
 loadModels().then(() => {
-  app.listen(5001, () => {
-    console.log('Face analysis server running on port 5001');
+  const PORT = process.env.PORT || 5001;
+  app.listen(PORT, () => {
+    console.log(`Face analysis server running on port ${PORT}`);
   });
 }).catch(err => {
   console.error('Failed to start server due to model loading error:', err);
 });
-
 app.post('/predict_face', async (req, res) => {
   if (!req.files || !req.files.image) {
     return res.status(400).json({ error: 'No image provided' });
